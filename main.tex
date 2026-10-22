@@ -1,0 +1,69 @@
+% Main Preamble
+
+\documentclass[12pt, letterpaper]{article}
+\title{Advion ESI-MS\\[0.12in] \large First Edition}
+\author{Caleb Griffin}
+\date{October, 2026}
+
+\usepackage{
+	xcolor, 
+	graphicx, 
+	titlesec, 
+	geometry, 
+	listings, 
+	amsmath,
+	hyperref
+}
+\usepackage{fontawesome5}
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\geometry{left=1.0in, right=1.0in, top=1.0in, bottom=1.0in}
+
+\pagecolor{white}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Introduction}
+This is a detailed guide for the maintenance and troubloshooting for the Advion Expression L ESI-MS.
+This is not an official guide from Advion, but the ``tips and tricks'' from a graduate student in Dr. Alex Lippert's lab.
+
+
+\section{Common Usage Guide}
+Common usage of the ESI-MS is in seven stages:
+\begin{itemize}
+	\item Sample preperation.
+	\item Instrument setup.
+	\item Pre-run cleaning.
+	\item sample injection.
+	\item post-run cleaning.
+	\item Instrument satndby.
+	\item Data analysis.
+\end{itemize}
+
+\subsection{Sample preparation}
+
+\subsection{Instrument setup}
+
+\section{FAQ}
+\begin{itemize}
+	\item \textbf{Why is the tune not working for a single mass?}\\
+		SOmetimes a fragment mass for the runing solution is not bright on the tuning run.
+		Remove the mass from the calibration proceedure for preliminary calibration and return the mass at a later calibration.
+	\item \textbf{How often should I tune the instrument}\\
+		Once every 7 or 14 days is typically good practice.
+\end{itemize}
+
+\end{document}
