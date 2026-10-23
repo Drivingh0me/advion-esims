@@ -1,7 +1,7 @@
 % Main Preamble
 
 \documentclass[12pt, letterpaper]{article}
-\title{Advion ESI-MS\\[0.12in] \large First Edition}
+\title{Advion ESI-MS Maintenance Guide\\[0.12in] \large First Edition}
 \author{Caleb Griffin}
 \date{October, 2026}
 
@@ -40,6 +40,30 @@
 This is a detailed guide for the maintenance and troubloshooting for the Advion Expression L ESI-MS.
 This is not an official guide from Advion, but the ``tips and tricks'' from a graduate student in Dr. Alex Lippert's lab.
 
+\section{General Knowledge on ESI-MS}
+There are a few concepts that are best to understand before using the ESI-Ms proficiently. 
+
+\subsection{Scan speed}
+
+\subsection{Scan range}
+
+\subsection{Quadrapole MS}
+
+\subsection{Ionization}
+Ionization charges, coefficient, hardness.
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
 
 \section{Common Usage Guide}
 Common usage of the ESI-MS is in seven stages:
@@ -52,18 +76,85 @@ Common usage of the ESI-MS is in seven stages:
 	\item Instrument satndby.
 	\item Data analysis.
 \end{itemize}
+Each of these steps needs to be performed for the instrument to read well and perform well over a long period of time.
+
 
 \subsection{Sample preparation}
 
 \subsection{Instrument setup}
 
+\subsection{Pre-run cleaning}
+
+\subsection{sample injection}
+
+\subsection{post-run cleaning}
+
+\subsection{Instrument satndby}
+
+\subsection{Data analysis}
+
+\section{Calibration}
+Calibrating the instrument is performed at a regular interval, typically  or 14 days.
+Calibration is performed independently for the positive and negative modes, but the same procedure is performed for both.
+Calibration is done in the tune/calibration tab on the right side of the advion mass express app.
+
+\subsection{Peak Standards}
+These are the masses of the corresponding signals from the tuning solution.
+There are different masses for the negative and positive modes and the tuning solution produces different species for both. You can remove and add peak masses.
+
+\subsection{Running a calibration}
+
+\subsection{Testing a calibration}
+
+\subsection{Reading the calibration report}
+
+\subsection{}
+
+\section{Cleaning \& Maintenance}
+Cleaning the instrument and the occasional upkeep tasks are done as needed and usually not on a schedule.
+
+\subsection{Cleaning the ionization cone}
+
+\subsection{Replenishing solvent}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+
+\section{What not to do}
+There are multiple small things that can either damage the instrument or suppress signal.
+This is a list of things to avoid when using or maintaining the ESI-MS.
+\begin{itemize}
+	\item \textbf{Bad solvents}\\
+	Do not use high boiling point solvents like DMSO, DMF, or NMP for sample preparation or as the mobile soution.
+	
+	\item \textbf{No nitrogen flow}\\
+	
+	\item \textbf{Pulling on isocratic pump}\\
+	
+	\item \textbf{Shaking the instrument}\\
+	
+	\item \textbf{Using non-HPLC grade solvent}\\
+	
+	\item \textbf{}\\
+
+\end{itemize}
+
+
 \section{FAQ}
 \begin{itemize}
 	\item \textbf{Why is the tune not working for a single mass?}\\
-		SOmetimes a fragment mass for the runing solution is not bright on the tuning run.
+		Sometimes a fragment mass for the runing solution is not bright on the tuning run.
 		Remove the mass from the calibration proceedure for preliminary calibration and return the mass at a later calibration.
-	\item \textbf{How often should I tune the instrument}\\
+	\item \textbf{How often should I tune the instrument?}\\
 		Once every 7 or 14 days is typically good practice.
+		
+	\item \textbf{Why are my sample peaks negative on the counts/time graph?}\\
+		Not sure, but I have occasionally resolved this issue by simply diluting the sample more.
+		It does appear that this sometimes is just a characteristic of a poor analyte that may not be studied well by ESI-MS.
 \end{itemize}
 
 \end{document}
