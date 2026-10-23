@@ -52,31 +52,20 @@ There are a few concepts that are best to understand before using the ESI-Ms pro
 \subsection{Ionization}
 Ionization charges, coefficient, hardness.
 
-\subsection{}
 
-\subsection{}
-
-\subsection{}
-
-\subsection{}
-
-\subsection{}
-
-\subsection{}
-
-
-\section{Common Usage Guide}
+\section{Common Usage}
 Common usage of the ESI-MS is in seven stages:
 \begin{itemize}
-	\item Sample preperation.
+	\item Sample preparation.
 	\item Instrument setup.
 	\item Pre-run cleaning.
-	\item sample injection.
-	\item post-run cleaning.
-	\item Instrument satndby.
+	\item Sample injection.
+	\item Post-run cleaning.
+	\item Instrument standby.
 	\item Data analysis.
 \end{itemize}
 Each of these steps needs to be performed for the instrument to read well and perform well over a long period of time.
+Follow this Standard Operating Procedure when analyzing most samples.
 
 
 \subsection{Sample preparation}
@@ -85,18 +74,49 @@ Each of these steps needs to be performed for the instrument to read well and pe
 
 \subsection{Pre-run cleaning}
 
-\subsection{sample injection}
+\subsection{Sample injection}
 
-\subsection{post-run cleaning}
+\subsection{Post-run cleaning}
 
-\subsection{Instrument satndby}
+\subsection{Instrument standby}
 
 \subsection{Data analysis}
+
+\section{Coupling to HPLC}
+This is more advanced than simply running a normal sample.
+It can be achieved in these steps:
+\begin{itemize}
+	\item Sample preparation.
+	\item ESI-MS instrument setup.
+	\item HPLC instrument setup.
+	\item Running sample.
+	\item Instrument standby.
+	\item Data analysis.
+\end{itemize}
+Although these instruments are theoretically able to be coupled digitally so that one can control the other,
+I have not been able to achieve this. 
+In my experience, the instruments are run at the same time under each their own control.
+
+
+\subsection{Sample preparation}
+
+\subsection{Instrument setup}
+
+\subsection{Pre-run cleaning}
+
+\subsection{Sample injection}
+
+\subsection{Post-run cleaning}
+
+\subsection{Instrument standby}
+
+\subsection{Data analysis}
+
 
 \section{Calibration}
 Calibrating the instrument is performed at a regular interval, typically  or 14 days.
 Calibration is performed independently for the positive and negative modes, but the same procedure is performed for both.
-Calibration is done in the tune/calibration tab on the right side of the advion mass express app.
+Calibration is done in the tune/calibration tab on the right side of the Advion mass express app.
 
 \subsection{Peak Standards}
 These are the masses of the corresponding signals from the tuning solution.
@@ -108,7 +128,6 @@ There are different masses for the negative and positive modes and the tuning so
 
 \subsection{Reading the calibration report}
 
-\subsection{}
 
 \section{Cleaning \& Maintenance}
 Cleaning the instrument and the occasional upkeep tasks are done as needed and usually not on a schedule.
@@ -116,30 +135,60 @@ Cleaning the instrument and the occasional upkeep tasks are done as needed and u
 \subsection{Cleaning the ionization cone}
 
 \subsection{Replenishing solvent}
+The typical solvent used for the ``mobile phase'' of the ESI-MS is a mixture of methanol, water, and formic acid. 
+Each of these should be HPLC grade to prevent particles from stopping up the PEEK tubing. 
+This mixture can damage the solvent intake filter that is immersed into the solvent resivior.
+Check the polymer filter for damage or brittleness to make sure it is still in good condition.
+If the filter is in poor condition, it will leach plastic particles into the isocratic pump, causing it to fail (this has happened previously).
 
-\subsection{}
 
-\subsection{}
+\subsection{Venting}
 
-\subsection{}
+\subsection{Pumping down}
+
+\subsection{Edwards vacuum pump maintenance}
+The vacuum pump on the floor next to the instrument needs to be maintained.
+This is done once a year in January and is simply changing the oil and filter.
+
+\section{Maintenance Calendar}
+The periodic maintenance of the instrument is paramount for sustaining reliable usage and preventing damage.
+The following is a list of all the periodic maintenance listed from most frequent to least.
+
+\begin{itemize}
+
+\item \textbf{Calibration (7 - 14 days)}\\
+I recommend calibration every Monday morning.
+
+\item \textbf{Cleaning (1 - 3 months)}\\
+This is more as needed.
+
+\item \textbf{Pump oil change (1 year)}\\
+I recommend changing the oil every January.
 
 
-\section{What not to do}
+\end{itemize}
+
+
+\section{What NOT to Do}
 There are multiple small things that can either damage the instrument or suppress signal.
 This is a list of things to avoid when using or maintaining the ESI-MS.
+Items listed in \textcolor{red}{red} will damage the instrument and should never be done.
 \begin{itemize}
-	\item \textbf{Bad solvents}\\
-	Do not use high boiling point solvents like DMSO, DMF, or NMP for sample preparation or as the mobile soution.
+	\item \textbf{\textcolor{red}{Halogenated solvents}}\\
+	Halogenated solvents like chloroform and DCM damage the PEEK tubing that carries the solvent through the instrument.
 	
-	\item \textbf{No nitrogen flow}\\
+	\item \textbf{\textcolor{red}{No nitrogen flow}}\\
 	
-	\item \textbf{Pulling on isocratic pump}\\
+	\item \textbf{\textcolor{red}{Pulling on isocratic pump}}\\
 	
-	\item \textbf{Shaking the instrument}\\
+	\item \textbf{\textcolor{red}{Shaking the instrument}}\\
+	
+	\item \textbf{\textcolor{red}{Not fully dissolved samples}}\\
 	
 	\item \textbf{Using non-HPLC grade solvent}\\
 	
-	\item \textbf{}\\
+	\item \textbf{Non-volatile solvents}\\
+	Do not use high boiling point solvents like DMSO, DMF, or NMP for sample preparation or as the mobile solution.
 
 \end{itemize}
 
