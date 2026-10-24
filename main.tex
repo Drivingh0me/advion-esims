@@ -103,6 +103,7 @@ In my experience, the instruments are run at the same time under each their own 
 \subsection{Sample preparation}
 
 \subsection{Instrument setup}
+Make sure the nitrogen tank is between 40 -- 60 psi on the line side.
 
 \subsection{Pre-run cleaning}
 
@@ -176,10 +177,16 @@ There are multiple small things that can either damage the instrument or suppres
 This is a list of things to avoid when using or maintaining the ESI-MS.
 Items listed in \textcolor{red}{red} will damage the instrument and should never be done.
 \begin{itemize}
+
 	\item \textbf{\textcolor{red}{Halogenated solvents}}\\
 	Halogenated solvents like chloroform and DCM damage the PEEK tubing that carries the solvent through the instrument.
 	
 	\item \textbf{\textcolor{red}{No nitrogen flow}}\\
+	Anytime the instrument is in ``operation mode (red button)'' the nitrogen gas needs to be flowing.
+	I recommend checking the cypinder pressure regulary so that the nitrogen does not run out when someone is ussing the instrument.
+	The nitrogen sould be between 40 -- 60 psi one the sintrument side.
+	If the nitrogen gas runs out durring operation, then the head is not able to ne cooled so it will overheat.
+
 	
 	\item \textbf{\textcolor{red}{Pulling on isocratic pump}}\\
 	
@@ -197,15 +204,18 @@ Items listed in \textcolor{red}{red} will damage the instrument and should never
 
 \section{FAQ}
 \begin{itemize}
+
 	\item \textbf{Why is the tune not working for a single mass?}\\
 		Sometimes a fragment mass for the runing solution is not bright on the tuning run.
 		Remove the mass from the calibration proceedure for preliminary calibration and return the mass at a later calibration.
+
 	\item \textbf{How often should I tune the instrument?}\\
 		Once every 7 or 14 days is typically good practice.
 		
 	\item \textbf{Why are my sample peaks negative on the counts/time graph?}\\
 		Not sure, but I have occasionally resolved this issue by simply diluting the sample more.
 		It does appear that this sometimes is just a characteristic of a poor analyte that may not be studied well by ESI-MS.
+
 \end{itemize}
 
 \end{document}
