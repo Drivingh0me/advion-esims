@@ -12,7 +12,8 @@
 	geometry, 
 	listings, 
 	amsmath,
-	hyperref
+	hyperref,
+	siunitx
 }
 \usepackage{fontawesome5}
 \usepackage[default]{lato}
@@ -39,81 +40,107 @@
 \section{Introduction}
 This is a detailed guide for the maintenance and troubloshooting for the Advion Expression L ESI-MS.
 This is not an official guide from Advion, but the ``tips and tricks'' from a graduate student in Dr. Alex Lippert's lab.
-This is not a commprehensive list of all knowledge you need to maintain the ESI-MS, but it does cover 95\% of what you will need to know.
+This is not a comprehensive list of all knowledge you need to maintain the ESI-MS, but it does cover 95\% of what you will need to know.
+
+There are online resources for learning about ESI-MS and some online material on the particular Advion MS.
 
 \section{General Knowledge on ESI-MS}
-There are a few concepts that are best to understand before using the ESI-Ms proficiently. Remember these as you observe odd data or encounter something you have not seen before.
+There are a few concepts that are best to understand before using the ESI-MS proficiently. 
+Remember these as you observe odd data or encounter something you have not seen before.
+The instrument is in general, finicky.
+Sometimes the instrument sill not read your sample's mass, will not calibrate well, will not find a peak in the tuning solution, etc.
+These can vary from day to day and are not easily explainable, if at all.
+Don't let the instrument discourage you, it can be very convenient when working well.
 
 \subsection{Scan speed}
-The scan speed is the rate the quadrapole MS scans through the mass range. The generally recommended range for scan speeds is 400-2000 amu/s. Lower scan speeds
+The scan speed is the rate the quadrupole MS scans through the mass range. The generally recommended range for scan speeds is 400 -- 2000 mz\textsuperscript{-1}s\textsuperscript{-1}. 
+Lower scan speeds are generally higher resolution, but I would not recommend lower than 400.
 
 \subsection{Scan range}
+The scan range is the mass range that the quadrupole will scan across.
+A shorter range will scan in less time than a longer scan range.
+Typically you want your scan time for the whole range to be between 500 -- 1000 ms.
+If the scan time is longer than 1000 ms you risk not seeing you peak visibly because our entire sample is only observed in one or a few scans.
+It is preferable for your sample to be present in multiple scans so that the average can be taken to reduce noise.
 
-\subsection{Quadrapole MS}
+\subsection{Quadrupole MS}
+A quadrupole MS uses four parallel conductive rods that are charged in opposing pairs with an alternating current.
+The frequency of the assimilation of the current is not constant.
+It scan across a frequency range, each corresponding to a stable frequency for a species of a given m/z.
+All other species of different m/z are scattered by the quadrupole's field and do not make it to the detector.
+Collisions with a detector are used to determine the mass of the species by correlation with the active frequency.
 
 \subsection{Ionization}
 Ionization charges, coefficient, hardness.
+The sample is initially dissolved in a neutral solvent. 
+This solution is then charged by a voltage at the head and sprayed out in a mist and accelerated downward towards the cone where off-axis species are rejected because their path is not straight.
+As this fine mist flies through the low pressure nitrogen environment, solvent evaporates and the charge condenses onto the sample.
+The sample then collects it charge and separates as a species the quadrupole can detect.
 
 
 \section{Common Usage}
-Common usage of the ESI-MS is in seven stages:
-\begin{itemize}
-	\item Sample preparation.
-	\item Instrument setup.
-	\item Pre-run cleaning.
-	\item Sample injection.
-	\item Post-run cleaning.
-	\item Instrument standby.
-	\item Data analysis.
-\end{itemize}
 Each of these steps needs to be performed for the instrument to read well and perform well over a long period of time.
 Follow this Standard Operating Procedure when analyzing most samples.
 
 
 \subsection{Sample preparation}
+The sample to inject should be less than 100 ppm, preferably 20 ppm. Higher concentrations can lead to ``tails'' in the chromatogram. 
+This may also be a sign that the sample will stain the instrument for a period of time. 
+The easiest way to prepare the sample is buy dissolving 1 mg of your sample completely in 1 mL of solvent (typically methanol, acetonitrile, or water) then adding one drop of that solution to one drop of the pure solvent. 
+This is called a serial dilution.
 
 \subsection{Instrument setup}
+Select the manual run tab on the left side of the Advion Mass Express app.
+Select the ``MS Method'' and ``Method'' sub-tab.
+Here you can select one or two ion source and source charge and scan range.
+You can then set either scan speed or scan time.
+These value are interdependent on each other and the scan range.
 
 \subsection{Pre-run cleaning}
+Prepare the clean syringe with a flat needle tip by filling with methanol and removing any bubbles.
+Inject three washes of at least 20 \textmu L each.
 
 \subsection{Sample injection}
+The sample loop is 5 textmu L.
+I would recommend injecting a minimum of 10 \textmu L with 20 \textmu L being the standard.
 
 \subsection{Post-run cleaning}
+Wash three times with methanol, same as the pre-run cleaning.
 
 \subsection{Instrument standby}
+Press the red power button in the top-right corner of the Mass Express app to place the instrument into standby mode.
 
 \subsection{Data analysis}
+In Advion Mass Express, press the ``Data Express'' button in the bottom right of the app to open your current experiment in the Advion Data Express app, where you analyze the data.
+
 
 \section{Coupling to HPLC}
 This is more advanced than simply running a normal sample.
-It can be achieved in these steps:
-\begin{itemize}
-	\item Sample preparation.
-	\item ESI-MS instrument setup.
-	\item HPLC instrument setup.
-	\item Running sample.
-	\item Instrument standby.
-	\item Data analysis.
-\end{itemize}
-Although these instruments are theoretically able to be coupled digitally so that one can control the other,
+These instruments are theoretically able to be coupled digitally so that one can control the other,
 I have not been able to achieve this. 
 In my experience, the instruments are run at the same time under each their own control.
 
 
 \subsection{Sample preparation}
+Similarly to when preparing samples for the ESI-MS, HPLC samples are quite dilute.
 
-\subsection{Instrument setup}
+\subsection{ESI Instrument setup}
+Make sure the nitrogen tank is between 40 -- 60 psi on the line side.
+Connect PEEK tubing from the output of either the DAD or the column directly to the head of the ESI-MS.
+
+\subsection{HPLC Instrument setup}
 Make sure the nitrogen tank is between 40 -- 60 psi on the line side.
 
-\subsection{Pre-run cleaning}
 
-\subsection{Sample injection}
-
-\subsection{Post-run cleaning}
+\subsection{Running sample}
+Press run sample on the HPLC then once the time starts counting, press ok on the ESI to start collecting data.
 
 \subsection{Instrument standby}
+Return the HPLC to standby and then return the ESI to standby as you normal would for each instrument.
 
 \subsection{Data analysis}
+Data collected from the HPLC can be viewed from the DAD if it was not bypassed during setup.
+The masses are now visible from the chromatogram on the ESI.
 
 
 \section{Calibration}
@@ -126,19 +153,27 @@ These are the masses of the corresponding signals from the tuning solution.
 There are different masses for the negative and positive modes and the tuning solution produces different species for both. You can remove and add peak masses.
 
 \subsection{Running a calibration}
+If the instrument does not allow you to change from positive to negative mode when tuning, simply set the default tuning values and it will let you change the charge mode.
 
 \subsection{Testing a calibration}
+Testing the performance of a calibration is done with the ``Test Performance" tool at the top of the ``Tune/Calibration'' tab.
+
 
 \subsection{Reading the calibration report}
-
+At the end of a calibration or test, a report is shown.
+This report has multiple columns and rows.
 
 \section{Cleaning \& Maintenance}
 Cleaning the instrument and the occasional upkeep tasks are done as needed and usually not on a schedule.
 
 \subsection{Cleaning the ionization cone}
+Cleaning the ionization cone is done by first washing it with acetone then inserting it upside down into a beaker or Erlenmeyer or graduated cylinder with enough acetonitrile and  1\% formic acid to cover the cone. 
+The long thin tail of the cone does not need to be covered.
 
 \subsection{Replenishing solvent}
 The typical solvent used for the ``mobile phase'' of the ESI-MS is a mixture of methanol, water, and formic acid. 
+I recommend a mixture of 80\% methanol, 20\% water, and 0.1\% formic acid.
+This solution can be changed for different applications, but it is best for it to be acidic and polar, typically partially aqueous.
 Each of these should be HPLC grade to prevent particles from stopping up the PEEK tubing. 
 This mixture can damage the solvent intake filter that is immersed into the solvent resivior.
 Check the polymer filter for damage or brittleness to make sure it is still in good condition.
@@ -146,6 +181,8 @@ If the filter is in poor condition, it will leach plastic particles into the iso
 
 
 \subsection{Venting}
+Venting the instrument mean turning off power to the turbine pump and letting it spin down.
+This can be achieved by clicking the ``vent'' button in the top right of the ``Control and Status'' tab in Mass Express.
 
 \subsection{Pumping down}
 
@@ -183,21 +220,35 @@ Items listed in \textcolor{red}{red} will damage the instrument and should never
 	
 	\item \textbf{\textcolor{red}{No nitrogen flow}}\\
 	Anytime the instrument is in ``operation mode (red button)'' the nitrogen gas needs to be flowing.
-	I recommend checking the cypinder pressure regulary so that the nitrogen does not run out when someone is ussing the instrument.
+	I recommend checking the cypinder pressure regulary so that the nitrogen does not run out when someone is using the instrument.
 	The nitrogen sould be between 40 -- 60 psi one the sintrument side.
 	If the nitrogen gas runs out durring operation, then the head is not able to ne cooled so it will overheat.
 
 	
 	\item \textbf{\textcolor{red}{Pulling on isocratic pump}}\\
+	Never use the syringe to pull or push onto the isocratic pump.
+	This can break a membrane in the pump and lead to complete failure of the pump.
 	
 	\item \textbf{\textcolor{red}{Shaking the instrument}}\\
+	There is a turbine pump that is used to get the pressure down to the \textmu bar pressure range from the mbar range the normal oil pump can achieve.
+	This turbine pump spins at extreme rotational velocity and experiences gyroscopic procession. 
+	Moving the instrument will result in the turbine colliding with internal components of the instrument.
+	If the turbine pump is moving, never pump or move the ESI.
 	
 	\item \textbf{\textcolor{red}{Not fully dissolved samples}}\\
+	If a sample is not fully dissolved, it can readily clog the PEEK tubing or the FIA valve or the ionization head.
+	Only analyze samples that are completely and fully dissolved.
 	
 	\item \textbf{Using non-HPLC grade solvent}\\
+	This may be a risk to the instrument and I would advise against using reagent grade solvents instead of HPLC grade solvents.
 	
 	\item \textbf{Non-volatile solvents}\\
 	Do not use high boiling point solvents like DMSO, DMF, or NMP for sample preparation or as the mobile solution.
+
+	\item \textbf{Over-tightening valves}\\
+	Do not over-tighten the valves on the instrument.
+	The valve on the isocratic pump is easily over-tightened in either direction.
+	The valves on the nitrogen tank are also easy to over-tighten.
 
 \end{itemize}
 
